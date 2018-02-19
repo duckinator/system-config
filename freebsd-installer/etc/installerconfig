@@ -8,11 +8,10 @@ echo "ntpd_enable=YES"   >> /etc/rc.conf
 echo "sshd_enable=YES"   >> /etc/rc.conf
 
 export ASSUME_ALWAYS_YES="yes"
-ansible_python_interpreter=python2.7
 
 dhclient em0
 pkg update && \
 pkg upgrade && \
-pkg install ansible && \
-/usr/local/bin/ansible-pull -U https://github.com/duckinator/system-config.git freebsd-desktop.yml && \
+pkg install ansible git && \
+/usr/local/bin/ansible-pull -e "ansible_python_interpreter=python2.7" -U https://github.com/duckinator/system-config.git freebsd-desktop.yml && \
 echo && echo "Rebooting." && shutdown -r "+5s" && sleep 5
