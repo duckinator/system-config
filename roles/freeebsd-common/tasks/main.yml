@@ -1,0 +1,25 @@
+- name: Install common packages
+  #raw: yes | pkg install {{ item }}
+  pkgng:
+      name: "{{ item }}"
+      state: "present"
+  with_items:
+    - sudo
+    - git
+    - fish
+    - htop
+    - ruby
+    - neovim
+    - tree
+    - xfce4-terminal
+    - fluxbox
+    - xorg
+    - hexchat
+    - firefox
+
+# There's no ruby-gems metapackage, only ruby<version>-gems, so we have to
+# do some gross, hacky garbage to install rubygems automagically.
+- name: Install rubygems.
+  shell: "pkg install $(/usr/local/bin/ruby --version | cut -d '.' -f 1-2 | sed 's/[ .]//g')-gems"
+  environment:
+    ASSUME_ALWAYS_YES: "yes"

@@ -1,0 +1,14 @@
+---
+create_users:
+  - pup
+user_accounts:
+  pup:
+    groups: wheel #,docker
+    shell:
+      # TODO: Resolve redundancy?
+      freebsd: /usr/local/bin/fish
+      manjaro: /usr/bin/fish
+      archlinux: /usr/bin/fish
+      fedora: /usr/bin/fish
+    key: https://keyfile-combiner.herokuapp.com?github=duckinator&gitlab=duckinator
+
