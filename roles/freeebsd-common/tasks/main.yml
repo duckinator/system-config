@@ -23,3 +23,20 @@
   shell: "pkg install $(/usr/local/bin/ruby --version | cut -d '.' -f 1-2 | sed 's/[ .]//g')-gems"
   environment:
     ASSUME_ALWAYS_YES: "yes"
+
+- name: Copy configuration files
+  copy:
+    src: roles/freebsd-common/files
+    dest: /
+
+- name: Enable bluetooth support
+  shell: "echo ng_ubt_load=\\\"YES\\\" >> /boot/loader.conf"
+
+- name: Enable audio
+  shell: "echo snd_hda_load=\\\"YES\\\" >> /boot/loader.conf"
+
+- name: Create directories used for printing
+  shell: "mkdir -p /var/spool/lpd/lp && chown daemon:daemon /var/spool/lpd/lp && chmod 770 /var/spool/lpd/lp"
+
+- name: Enable Linux compatability layer
+  shell: "echo linux_enable=\\\"YES\\\" >> /etc/rc.conf"

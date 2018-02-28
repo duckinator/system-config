@@ -1,0 +1,6 @@
+lp:\
+	:lp=/dev/unlpt0:\  1
+	:sh:\
+	:mx#0:\
+	:sd=/var/spool/lpd/lp:\
+	:lf=/var/log/lpd-errs:
