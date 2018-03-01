@@ -6,7 +6,7 @@
   become: yes
   become_method: sudo
   roles:
-    - freeebsd-common
+    - freebsd-common
     - user-accounts
   vars:
     dist_codename: freebsd
