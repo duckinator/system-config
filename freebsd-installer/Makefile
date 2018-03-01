@@ -1,16 +1,16 @@
 # REQUIREMENTS: isoinfo, 7zip, wget, mkisofs, awk, sed.
 
 FREEBSD_VERSION ?= 11.1
-RELEASE_TYPE ?= RELEASE
 ARCH ?= amd64
+REVISION ?= 20180215-r329320
 
 ISO_VARIANT := disc1
 
-ISO_FILENAME_PREFIX := FreeBSD-${FREEBSD_VERSION}-${RELEASE_TYPE}-${ARCH}-${ISO_VARIANT}
+ISO_FILENAME_PREFIX := FreeBSD-${FREEBSD_VERSION}-STABLE-${ARCH}-${REVISION}-${ISO_VARIANT}
 ORIGINAL_ISO := ${ISO_FILENAME_PREFIX}.iso
 CUSTOM_ISO := ${ISO_FILENAME_PREFIX}-duckinator.iso
 
-IMG_FILENAME_PREFIX = FreeBSD-${FREEBSD_VERSION}-${RELEASE_TYPE}-${ARCH}-memstick
+IMG_FILENAME_PREFIX = FreeBSD-${FREEBSD_VERSION}-STABLE-${ARCH}-${REVISION}-memstick
 ORIGINAL_IMG := ${IMG_FILENAME_PREFIX}.img
 CUSTOM_IMG := ${IMG_FILENAME_PREFIX}.img
 
@@ -39,11 +39,11 @@ ${CUSTOM_IMG}: downloads/${ORIGINAL_IMG}
 
 downloads/${ORIGINAL_ISO}:
 	mkdir -p downloads
-	wget "https://download.freebsd.org/ftp/releases/${ARCH}/${ARCH}/ISO-IMAGES/${FREEBSD_VERSION}/${ORIGINAL_ISO}" -O downloads/${ORIGINAL_ISO}
+	wget "https://download.freebsd.org/ftp/snapshots/ISO-IMAGES/${FREEBSD_VERSION}/${ORIGINAL_ISO}" -O downloads/${ORIGINAL_ISO}
 
 downloads/${ORIGINAL_IMG}:
 	mkdir -p downloads
-	wget "https://download.freebsd.org/ftp/releases/${ARCH}/${ARCH}/ISO-IMAGES/${FREEBSD_VERSION}/${ORIGINAL_IMG}" -O downloads/${ORIGINAL_IMG}
+	wget "https://download.freebsd.org/ftp/snapshots/ISO-IMAGES/${FREEBSD_VERSION}/${ORIGINAL_IMG}" -O downloads/${ORIGINAL_IMG}
 
 
 clean:
