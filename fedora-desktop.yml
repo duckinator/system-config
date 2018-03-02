@@ -10,7 +10,6 @@
     - user-accounts
   vars:
     dist_codename: fedora
-    #reboot_after_update: true
     createusers:
       - pup
 
