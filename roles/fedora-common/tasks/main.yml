@@ -1,0 +1,15 @@
+- name: Install common packages
+  dnf:
+      name: "{{ item }}"
+      state: "present"
+  with_items:
+    - firefox
+    - fish
+    - git
+    - hexchat
+    - htop
+    - neovim
+    - ruby
+    - sudo
+    - tree
+    - xclip

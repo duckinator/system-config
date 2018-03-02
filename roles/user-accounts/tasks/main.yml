@@ -22,8 +22,8 @@
   with_items: "{{ create_users }}"
 
 - name: Expiring Passwords for new users (Linux)
-  command: "passwd -d -e {{ item.item.key }}"
-  #when: item|changed
+  command: "passwd -e {{ item.item }}"
+  when: item|changed
   with_items: "{{ users.results }}"
   when: not dist_codename | search("bsd")
 
