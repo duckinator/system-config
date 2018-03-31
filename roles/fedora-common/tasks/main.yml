@@ -11,5 +11,6 @@
     - neovim
     - ruby
     - sudo
+    - tmux
     - tree
     - xclip
