@@ -3,11 +3,6 @@
     src: roles/user-accounts/files/
     dest: /
 
-- name: Ensure group "sudo" exists
-  group:
-    name: sudo
-    state: present
-
 - name: Adding users
   user:
     name: "{{ item }}"

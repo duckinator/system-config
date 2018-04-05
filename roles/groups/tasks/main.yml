@@ -1,0 +1,10 @@
+- name: Add groups
+  group:
+    name: "{{ item }}"
+    state: present
+  with_items:
+    - sudo
+    - kvm
+    - docker
+    - vboxusers
+    - cdrom
