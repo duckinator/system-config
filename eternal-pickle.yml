@@ -1,2 +1,2 @@
 ---
-- import_playbook: desktop-fedora.yml
+- import_playbook: desktop.yml

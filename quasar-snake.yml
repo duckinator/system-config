@@ -1,2 +1,2 @@
 ---
-- import_playbook: tablet-kali.yml
+- import_playbook: desktop.yml
