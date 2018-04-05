@@ -1,3 +1,0 @@
----
-# Generic playbook for FreeBSD virtual machines.
-- include_playbook: playbooks/freebsd-desktop.yml

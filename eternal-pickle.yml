@@ -1,3 +1,0 @@
----
-# Main desktop.
-- include_playbook: playbooks/fedora-desktop.yml
