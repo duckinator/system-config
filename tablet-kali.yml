@@ -1,2 +1,15 @@
 ---
-- import_playbook: desktop-debian.yml
+- hosts: 127.0.0.1
+  connection: local
+  strategy: debug
+  remote_user: setup
+  become: yes
+  become_method: sudo
+  roles:
+    - kali-common
+    - user-accounts
+  vars:
+    dist_codename: kali
+    createusers:
+      - pup
+
