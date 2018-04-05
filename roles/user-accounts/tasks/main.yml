@@ -23,9 +23,8 @@
 
 - name: Expiring Passwords for new users (Linux)
   command: "passwd -e {{ item.item }}"
-  when: item|changed
   with_items: "{{ users.results }}"
-  when: not item|changed and not dist_codename|search("bsd")
+  when: item|changed and not dist_codename|search("bsd")
 
 - name: Expiring Passwords for new users (FreeBSD)
   command: "pw usermod {{ item.item }} -p -1"
