@@ -6,6 +6,7 @@
 - name: Locate shell executable
   command: "/usr/bin/which {{ user_accounts[item].shell }}"
   register: shell_executable
+  with_items: "{{ create_users }}"
 
 - name: Adding users
   user:
@@ -13,7 +14,7 @@
     groups: "{{ user_accounts[item].groups }}"
     append: yes
     generate_ssh_key: yes
-    shell: "{{ shell_executable }}"
+    shell: "{{ shell_executable[item] }}"
     state: present
   with_items: "{{ create_users }}"
   register: users
