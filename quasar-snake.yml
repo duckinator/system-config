@@ -1,0 +1,3 @@
+---
+# Dell convertable tablet/laptop.
+- import_playbook: playbooks/kali-tablet.yml
