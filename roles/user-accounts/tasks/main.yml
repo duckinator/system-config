@@ -25,7 +25,7 @@
   command: "passwd -e {{ item.item }}"
   when: item|changed
   with_items: "{{ users.results }}"
-  when: not dist_codename | search("bsd")
+  when: not item|changed or not dist_codename|search("bsd")
 
 - name: Expiring Passwords for new users (FreeBSD)
   command: "pw usermod {{ item.item }} -p -1"
