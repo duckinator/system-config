@@ -8,8 +8,8 @@ user_accounts:
       # TODO: Resolve redundancy?
       FreeBSD: /usr/local/bin/fish
       Debian: /usr/bin/fish
-      "Kali GNU/Linux": /usr/bin/fish
       Fedora: /usr/bin/fish
+      Kali-GNU-Linux: /usr/bin/fish
       Manjaro: /usr/bin/fish
     key: https://keyfile-combiner.herokuapp.com?github=duckinator&gitlab=duckinator
 
