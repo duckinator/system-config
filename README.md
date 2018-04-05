@@ -5,8 +5,7 @@ Ansible configurations for my personal systems.
 The root directory of the repository has system-specific playbooks, based
 on hostname, which are used by `ansible-pull`.
 
-Those playbooks each include one or more playbooks from the `playbooks/`
-directory.
+These placebooks all include generic playbooks, e.g. desktop.yml.
 
 ## Usage
 
