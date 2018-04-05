@@ -3,9 +3,9 @@
     src: roles/user-accounts/files/
     dest: /
 
-- name: Ensure group "wheel" exists
+- name: Ensure group "sudo" exists
   group:
-    name: wheel
+    name: sudo
     state: present
 
 - name: Adding users
@@ -33,6 +33,5 @@
 
 - name: Expiring Passwords for new users (FreeBSD)
   command: "pw usermod {{ item.item }} -p -1"
-  #when: item|changed
   with_items: "{{ users.results }}"
-  when: dist_codename | search("freebsd")
+  when: item|changed and dist_codename|search("freebsd")

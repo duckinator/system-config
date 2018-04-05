@@ -3,7 +3,7 @@ create_users:
   - pup
 user_accounts:
   pup:
-    groups: wheel #,docker
+    groups: sudo #,docker
     shell:
       # TODO: Resolve redundancy?
       freebsd: /usr/local/bin/fish
