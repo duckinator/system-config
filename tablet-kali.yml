@@ -1,2 +1,2 @@
 ---
-- import_playbook: debian-desktop.yml
+- import_playbook: desktop-debian.yml
