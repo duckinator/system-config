@@ -9,6 +9,7 @@ user_accounts:
       freebsd: /usr/local/bin/fish
       archlinux: /usr/bin/fish
       debian: /usr/bin/fish
+      kali: /usr/bin/fish
       fedora: /usr/bin/fish
       manjaro: /usr/bin/fish
     key: https://keyfile-combiner.herokuapp.com?github=duckinator&gitlab=duckinator
