@@ -4,12 +4,6 @@ create_users:
 user_accounts:
   pup:
     groups: sudo, cdrom, docker, kvm, vboxusers
-    shell:
-      # TODO: Resolve redundancy?
-      FreeBSD: /usr/local/bin/fish
-      Debian: /usr/bin/fish
-      Fedora: /usr/bin/fish
-      Kali-GNU-Linux: /usr/bin/fish
-      Manjaro: /usr/bin/fish
+    shell: fish
     key: https://keyfile-combiner.herokuapp.com?github=duckinator&gitlab=duckinator
 
