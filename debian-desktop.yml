@@ -1,0 +1,15 @@
+---
+- hosts: 127.0.0.1
+  connection: local
+  strategy: debug
+  remote_user: setup
+  become: yes
+  become_method: sudo
+  roles:
+    - debian-common
+    - user-accounts
+  vars:
+    dist_codename: debian
+    createusers:
+      - pup
+
