@@ -3,6 +3,11 @@
     src: roles/user-accounts/files/
     dest: /
 
+- name: Ensure group "wheel" exists
+  group:
+    name: wheel
+    state: present
+
 - name: Adding users
   user:
     name: "{{ item }}"
