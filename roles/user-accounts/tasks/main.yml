@@ -3,10 +3,16 @@
     src: roles/user-accounts/files/
     dest: /
 
-# Grep /etc/shells for sometething ending with "/<shell name>".
-# Creates an absolutely indecipherable dict.
+# Creates an absolutely indecipherable dict we have to simplify later.
 - name: Locate shell executables
-  command: grep -E "/{{ user_accounts[item].shell }}$" /etc/shells
+  find:
+    # HACK: Instead of rifling through /etc/shells, we try /usr/bin,
+    #       /usr/local/bin, _then_ /bin, in that order.
+    paths:
+    - /usr/bin
+    - /usr/local/bin
+    - /bin
+    patterns: "{{ user_accounts[item].shell }}"
   register: shell_executables_raw
   with_items: "{{ create_users }}"
 
@@ -23,7 +29,7 @@
   vars:
     # Turn the aforementioned indecipherable dict into a list formated like
     # [["shell1", "/path/to/shell1"], ["shell2", "/path/to/shell2"]]
-    shell_executables_list: "{{ shell_executables_raw | json_query('results[*].[item, stdout_lines[0]]') }}"
+    shell_executables_list: "{{ shell_executables_raw | json_query('results[*].[item, files[0].path]') }}"
     # Turn the aforementioned list into a dict.
     shell_executables: "{{ dict(shell_executables_list) }}"
 
