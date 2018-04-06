@@ -6,3 +6,6 @@
 - name: Add Docker CE repository
   apt_repository:
     repo: deb https://download.docker.com/linux/debian stable
+
+- name: Update APT cache
+  update_cache: yes

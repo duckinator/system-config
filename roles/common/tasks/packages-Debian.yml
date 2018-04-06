@@ -1,17 +1,26 @@
+- name: Install packages to enable HTTPS repositories
+  apt:
+    name:
+      - apt-transport-https
+      - ca-certificates
+      - curl
+      - gnupg2
+      - software-properties-common
+    state: present
+
 - name: Install common packages
   apt:
-      name: "{{ item }}"
-      state: "present"
-  with_items:
-    - firefox
-    - fish
-    - git
-    - hexchat
-    - htop
-    - neovim
-    - ruby
-    - sudo
-    - tmux
-    - tree
-    - xclip
-    - onboard
+    name:
+      - firefox
+      - fish
+      - git
+      - hexchat
+      - htop
+      - neovim
+      - ruby
+      - sudo
+      - tmux
+      - tree
+      - xclip
+      - onboard
+    state: present

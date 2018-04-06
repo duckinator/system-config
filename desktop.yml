@@ -6,6 +6,7 @@
   roles:
     - common
     - docker-ce
+    - system-upgrade
     - role: user-accounts
       createusers:
       - pup

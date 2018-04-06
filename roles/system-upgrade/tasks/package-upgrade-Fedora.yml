@@ -1,0 +1,4 @@
+- name: Perform a system upgrade
+  dnf:
+    name: '*'
+    state: latest
