@@ -8,4 +8,5 @@
     repo: deb https://download.docker.com/linux/debian stable
 
 - name: Update APT cache
-  update_cache: yes
+  apt:
+    update_cache: yes
