@@ -1,0 +1,41 @@
+- name: Install common packages
+  pkgng:
+    name:
+      - sudo
+      - git
+      - fish
+      - htop
+      - ruby
+      - neovim
+      - tree
+      - xfce4-terminal
+      - fluxbox
+      - xorg
+      - hexchat
+      - firefox
+    state: present
+
+# There's no ruby-gems metapackage, only ruby<version>-gems, so we have to
+# do some gross, hacky garbage to install rubygems automagically.
+- name: Install rubygems.
+  shell: "pkg install $(/usr/local/bin/ruby --version | cut -d '.' -f 1-2 | sed 's/[ .]//g')-gems"
+  environment:
+    ASSUME_ALWAYS_YES: "yes"
+
+- name: Enable bluetooth support
+  lineinfile:
+    path: /boot/lodaer.conf
+    line: "ng_ubt_load=\"YES\""
+    state: present
+
+- name: Enable audio
+  lineinfile:
+    path: /boot/loader.conf
+    line: "snd_hda_load=\"YES\""
+    state: present
+
+- name: Enable Linux compatability layer
+  lineinfile:
+    path: /etc/rc.conf
+    line: "linux_enable=\"YES\""
+    state: present
