@@ -5,7 +5,7 @@
 
 - name: Add Docker CE repository
   apt_repository:
-    repo: "deb https://download.docker.com/linux/debian stetch stable"
+    repo: "deb https://download.docker.com/linux/debian stretch stable"
 
 - name: Update APT cache
   apt:
