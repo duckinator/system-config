@@ -8,7 +8,7 @@
 - name: Locate shell executables
   command: grep -E "/{{ user_accounts[item].shell }}$" /etc/shells
   register: shell_executables_raw
-  with_items: "{{ create_users }} "
+  with_items: "{{ create_users }}"
 
 - name: Adding users
   user:
