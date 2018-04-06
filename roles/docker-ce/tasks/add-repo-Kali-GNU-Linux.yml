@@ -1,1 +1,12 @@
-- include_tasks: add-repo-Debian.yml
+- name: Add Docker CE GPG key
+  apt_key:
+    url: https://download.docker.com/linux/debian/gpg
+    state: present
+
+- name: Add Docker CE repository
+  apt_repository:
+    repo: "deb https://download.docker.com/linux/debian stetch stable"
+
+- name: Update APT cache
+  apt:
+    update_cache: yes
