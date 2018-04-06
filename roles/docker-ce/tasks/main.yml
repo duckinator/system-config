@@ -1,4 +1,4 @@
-- include_tasks: "packages-{{ ansible_distribution.replace('/', '-').replace(' ', '-') }}.yml"
+- include_tasks: "add-repo-{{ ansible_distribution.replace('/', '-').replace(' ', '-') }}.yml"
   when: ansible_distribution != "FreeBSD"
 
 - name: Install Docker CE
@@ -8,4 +8,5 @@
   when: ansible_distribution != "FreeBSD"
 
 - name: Not installing Docker CE on FreeBSD.
+  command: ""
   when: ansible_distribution == "FreeBSD"
