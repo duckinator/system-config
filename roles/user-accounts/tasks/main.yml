@@ -3,10 +3,12 @@
     src: roles/user-accounts/files/
     dest: /
 
-- name: Locate shell executable
-  command: "/usr/bin/which {{ user_accounts[item].shell }}"
-  register: shell_executable
-  with_items: "{{ create_users }}"
+# Grep /etc/shells for sometething ending with "/<shell name>".
+# Creates an absolutely indecipherable dict.
+- name: Locate shell executables
+  command: grep -E "/{{ user_accounts[item].shell }}$" /etc/shells
+  register: shell_executables_raw
+  with_items: "{{ create_users }} "
 
 - name: Adding users
   user:
@@ -14,10 +16,16 @@
     groups: "{{ user_accounts[item].groups }}"
     append: yes
     generate_ssh_key: yes
-    shell: "{{ shell_executable[item] }}"
+    shell: "{{ shell_executables[item] }}"
     state: present
   with_items: "{{ create_users }}"
   register: users
+  vars:
+    # Turn the aforementioned indecipherable dict into a list formated like
+    # [["shell1", "/path/to/shell1"], ["shell2", "/path/to/shell2"]]
+    shell_executables_list: "{{ shell_executables_raw | json_query('results[*].[item, stdout_lines[0]]') }}"
+    # Turn the aforementioned list into a dict.
+    shell_executables: "{{ dict(shell_executables_list) }}"
 
 - name: Add authorized keys
   authorized_key:
