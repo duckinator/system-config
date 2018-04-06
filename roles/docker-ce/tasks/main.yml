@@ -1,0 +1,6 @@
+- include_tasks: "packages-{{ ansible_distribution.replace('/', '-').replace(' ', '-') }}.yml"
+
+- name: Install Docker CE
+  package:
+    name: docker-ce
+    state: present
