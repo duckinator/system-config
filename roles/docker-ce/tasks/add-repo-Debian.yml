@@ -6,7 +6,3 @@
 - name: Add Docker CE repository
   apt_repository:
     repo: "deb https://download.docker.com/linux/debian {{ ansible_lsb.codename }} stable"
-
-- name: Update APT cache
-  apt:
-    update_cache: yes
