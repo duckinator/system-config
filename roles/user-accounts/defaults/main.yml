@@ -3,7 +3,7 @@ create_users:
   - pup
 user_accounts:
   pup:
-    groups: sudo, cdrom, docker, kvm, vboxusers
+    groups: sudo, cdrom, docker, kvm, vboxusers, lp
     shell: fish
     key: https://keyfile-combiner.herokuapp.com?github=duckinator&gitlab=duckinator
 
