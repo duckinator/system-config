@@ -10,3 +10,4 @@
     - role: user-accounts
       createusers:
       - pup
+    - dotfiles
