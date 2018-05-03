@@ -9,6 +9,7 @@
     - hexchat
     - htop
     - neovim
+    - python2-libselinux
     - ruby
     - sudo
     - tmux
