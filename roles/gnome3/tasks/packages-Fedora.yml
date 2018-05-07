@@ -1,4 +1,2 @@
 - name: Install GNOME3
-  dnf:
-      name: "@GNOME Desktop Environment"
-      state: "present"
+  command: dnf install "@GNOME Desktop Environment"
