@@ -11,3 +11,4 @@
       createusers:
       - pup
     - dotfiles
+    - gnome3
