@@ -3,6 +3,7 @@
       name: "{{ item }}"
       state: "present"
   with_items:
+    - cura
     - firefox
     - fish
     - git
@@ -15,8 +16,8 @@
     - tmux
     - tree
     - xclip
+    - python3
 
-# TODO: Make less hacky.
 - name: Install python2-libselinux if needed.
   dnf:
     name:
