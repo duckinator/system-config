@@ -11,12 +11,13 @@
     - htop
     - neovim
     - openscad
+    - python3
     - ruby
+    - rxvt-unicode
     - sudo
     - tmux
     - tree
     - xclip
-    - python3
 
 - name: Install python2-libselinux if needed.
   dnf:
