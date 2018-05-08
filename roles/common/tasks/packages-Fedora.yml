@@ -9,6 +9,7 @@
     - git
     - hexchat
     - htop
+    - mlocate
     - neovim
     - openscad
     - python3
