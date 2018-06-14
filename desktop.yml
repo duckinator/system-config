@@ -11,4 +11,4 @@
       createusers:
       - pup
     - dotfiles
-    - gnome3
+    - lxqt
