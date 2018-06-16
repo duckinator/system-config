@@ -4,6 +4,6 @@
   become_user: pup
 
 - name: Set up dotfiles.
-  command: /home/pup/dotfiles/bootstrap.py
+  command: python3 /home/pup/dotfiles/bootstrap.py
   become: yes
   become_user: pup
