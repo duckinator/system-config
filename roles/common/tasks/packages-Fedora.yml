@@ -15,6 +15,7 @@
     - python3
     - ruby
     - rxvt-unicode
+    - snapd
     - sudo
     - tmux
     - tree
