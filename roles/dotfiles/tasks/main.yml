@@ -3,7 +3,12 @@
   become: yes
   become_user: pup
 
+- name: Install Emanate
+  command: pip3 install emanate
+
 - name: Set up dotfiles.
-  command: python3 /home/pup/dotfiles/bootstrap.py
+  command: emanate --no-confirm
+  args:
+    chdir: /home/pup/dotfiles
   become: yes
   become_user: pup
