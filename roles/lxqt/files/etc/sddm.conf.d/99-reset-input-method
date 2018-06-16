@@ -1,0 +1,4 @@
+[General]
+# Reset InputMethod to disable the on-screen keyboard,
+# because it fills the entire screen on some systems.
+InputMethod=
