@@ -7,7 +7,7 @@
   command: pip3 install emanate
 
 - name: Set up dotfiles.
-  command: emanate --no-confirm
+  command: /home/pup/.local/bin/emanate --no-confirm --destination /home/pup/
   args:
     chdir: /home/pup/dotfiles
   become: yes
