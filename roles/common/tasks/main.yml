@@ -1,2 +1,19 @@
 - name: Install Packages
   include_tasks: "packages-{{ ansible_distribution.replace('/', '-').replace(' ', '-') }}.yml"
+
+- name: Add the Flathub Flatpak repository
+  flatpak_remote:
+    name: flathub
+    state: present
+    flatpakrepo_url: https://dl.flathub.org/repo/flathub.flatpakrepo
+    method: system
+
+- name: Install Flatpak packages from Flathub
+  method: system
+  name:
+    - org.signal.Signal
+    - com.skype.Client
+    - com.discordapp.Discord
+    - com.slack.Slack
+    - org.libreoffice.LibreOffice
+  remote: flathub
