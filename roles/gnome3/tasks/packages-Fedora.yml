@@ -1,2 +1,0 @@
-- name: Install GNOME3
-  command: dnf install -y "@GNOME Desktop Environment"
