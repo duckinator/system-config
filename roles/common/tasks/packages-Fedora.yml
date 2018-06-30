@@ -20,6 +20,15 @@
     - tmux
     - tree
     - xclip
+    - fedora-workstation-repositories
+
+- name: Enable third-party dnf repositories
+  command: dnf config-manager --set-enabled {{ item }}
+  loop:
+    - google-chrome
+    - rpmfusion-free
+    - rpmfusion-free-updates
+    - rpmfusion-nonfree-steam
 
 - name: Install python2-libselinux if needed.
   dnf:
