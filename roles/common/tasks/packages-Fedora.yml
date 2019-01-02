@@ -9,6 +9,7 @@
     - git
     - hexchat
     - htop
+    - kicad
     - mlocate
     - neovim
     - openscad
@@ -25,7 +26,6 @@
 - name: Enable third-party dnf repositories
   command: dnf config-manager --set-enabled {{ item }}
   loop:
-    - google-chrome
     - rpmfusion-free
     - rpmfusion-free-updates
     - rpmfusion-nonfree-steam
