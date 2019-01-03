@@ -4,7 +4,9 @@
   become_user: pup
 
 - name: Install Emanate
-  command: pip3 install emanate
+  command: pip3 install --user emanate
+  become: yes
+  become_user: pup
 
 - name: Set up dotfiles.
   command: /home/pup/.local/bin/emanate --no-confirm --destination /home/pup/
