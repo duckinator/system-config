@@ -1,33 +1,32 @@
 - name: Install common packages
   dnf:
-      name: "{{ item }}"
+      name:
+          - cura
+          - firefox
+          - fish
+          - git
+          - hexchat
+          - htop
+          - kicad
+          - mlocate
+          - neovim
+          - openscad
+          - python3
+          - ruby
+          - rxvt-unicode
+          - flatpak
+          - sudo
+          - tmux
+          - tree
+          - xclip
+          - fedora-workstation-repositories
+          - https://download1.rpmfusion.org/free/fedora/rpmfusion-free-release-{{ ansible_distribution_version }}.noarch.rpm
+          - https://download1.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-{{ ansible_distribution_version }}.noarch.rpm
       state: "present"
-  with_items:
-    - cura
-    - firefox
-    - fish
-    - git
-    - hexchat
-    - htop
-    - kicad
-    - mlocate
-    - neovim
-    - openscad
-    - python3
-    - ruby
-    - rxvt-unicode
-    - flatpak
-    - sudo
-    - tmux
-    - tree
-    - xclip
-    - fedora-workstation-repositories
 
 - name: Enable third-party dnf repositories
   command: dnf config-manager --set-enabled {{ item }}
   loop:
-    - rpmfusion-free
-    - rpmfusion-free-updates
     - rpmfusion-nonfree-steam
 
 - name: Install python2-libselinux if needed.
