@@ -43,9 +43,9 @@
 - name: Expiring Passwords for new users (Linux)
   command: "passwd -e {{ item.item }}"
   with_items: "{{ users.results }}"
-  when: item|changed and ansible_distribution != "FreeBSD"
+  when: item is changed and ansible_distribution != "FreeBSD"
 
 - name: Expiring Passwords for new users (FreeBSD)
   command: "pw usermod {{ item.item }} -p -1"
   with_items: "{{ users.results }}"
-  when: item|changed and ansible_distribution == "FreeBSD"
+  when: item is changed and ansible_distribution == "FreeBSD"
