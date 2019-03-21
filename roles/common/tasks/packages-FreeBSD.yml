@@ -1,18 +1,23 @@
 - name: Install common packages
   pkgng:
     name:
-      - sudo
-      - git
-      - fish
-      - htop
-      - ruby
-      - neovim
-      - tree
-      - xfce4-terminal
-      - fluxbox
-      - xorg
-      - hexchat
+      - bash
       - firefox
+      - git
+      - hexchat
+      - htop
+      - kicad
+      - neovim
+      - openscad
+      - python3
+      - ruby
+      - rxvt-unicode
+      - sudo
+      - tmux
+      - tree
+      - xclip
+      - x11/kde5
+      - x11/sddm
     state: present
 
 # There's no ruby-gems metapackage, only ruby<version>-gems, so we have to
@@ -22,20 +27,38 @@
   environment:
     ASSUME_ALWAYS_YES: "yes"
 
-- name: Enable bluetooth support
-  lineinfile:
-    path: /boot/loader.conf
-    line: "ng_ubt_load=\"YES\""
-    state: present
-
 - name: Enable audio
   lineinfile:
     path: /boot/loader.conf
     line: "snd_hda_load=\"YES\""
     state: present
 
+- name: Enable bluetooth
+  lineinfile:
+    path: /boot/loader.conf
+    line: "ng_ubt_load=\"YES\""
+    state: present
+
 - name: Enable Linux compatability layer
   lineinfile:
     path: /etc/rc.conf
     line: "linux_enable=\"YES\""
+    state: present
+
+- name: Enable D-Bus
+  lineinfile:
+    path: /etc/rc.conf
+    line: "dbus_enable=\"YES\""
+    state: present
+
+- name: Enable HAL
+  lineinfile:
+    path: /etc/rc.conf
+    line: "hald_enable=\"YES\""
+    state: present
+
+- name: Enable SDDM
+  lineinfile:
+    path: /etc/rc.conf
+    line: "sddm_enable=\"YES\""
     state: present
