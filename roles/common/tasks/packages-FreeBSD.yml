@@ -24,7 +24,7 @@
 
 - name: Enable bluetooth support
   lineinfile:
-    path: /boot/lodaer.conf
+    path: /boot/loader.conf
     line: "ng_ubt_load=\"YES\""
     state: present
 
