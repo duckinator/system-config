@@ -18,6 +18,7 @@
       - xclip
       - x11/kde5
       - x11/sddm
+      - emulators/linux_base-c7
     state: present
 
 # There's no ruby-gems metapackage, only ruby<version>-gems, so we have to
