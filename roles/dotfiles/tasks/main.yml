@@ -3,14 +3,21 @@
   become: yes
   become_user: pup
 
+- name: Install Emanate (Fedora)
+  dnf:
+    name: emanate
+    state: present
+  when: ansible_distribution == "Fedora"
+
 - name: Install Emanate
   command: pip3 install --user emanate
   become: yes
   become_user: pup
+  when: ansible_distribution != "Fedora"
 
+# For now, only automatically set up dotfiles on Fedora.
 - name: Set up dotfiles.
-  command: /home/pup/.local/bin/emanate --no-confirm --destination /home/pup/
-  args:
-    chdir: /home/pup/dotfiles
+  command: emanate --no-confirm --source /home/pup/dotfiles --destination /home/pup/
   become: yes
   become_user: pup
+  when: ansible_distribution == "Fedora"
