@@ -7,8 +7,7 @@
     method: system
     name:
       - org.signal.Signal
-      - com.skype.Client
       - com.discordapp.Discord
       - com.slack.Slack
-      - org.libreoffice.LibreOffice
+      - im.riot.Riot
     remote: flathub
