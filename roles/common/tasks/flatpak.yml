@@ -1,0 +1,14 @@
+- name: Add the Flathub Flatpak repository
+  command: flatpak remote-add --system --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo
+
+- name: Install Flatpak packages from Flathub
+  command: "flatpak install --assumeyes --{{ method }} {{ remote }} {{ ' '.join(name) }}"
+  vars:
+    method: system
+    name:
+      - org.signal.Signal
+      - com.skype.Client
+      - com.discordapp.Discord
+      - com.slack.Slack
+      - org.libreoffice.LibreOffice
+    remote: flathub
