@@ -21,6 +21,9 @@
       - emulators/linux_base-c7
     state: present
 
+- name: Install pip3
+  command: python3 -m ensurepip
+
 # There's no ruby-gems metapackage, only ruby<version>-gems, so we have to
 # do some gross, hacky garbage to install rubygems automagically.
 - name: Install rubygems.
