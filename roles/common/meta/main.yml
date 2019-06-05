@@ -1,4 +1,3 @@
 ---
 dependencies:
   - { role: operating-system }
-  - { role: docker-ce }

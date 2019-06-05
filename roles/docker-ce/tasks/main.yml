@@ -1,8 +1,0 @@
-- include_tasks: "add-repo-{{ ansible_distribution.replace('/', '-').replace(' ', '-') }}.yml"
-  when: ansible_distribution != "FreeBSD"
-
-- name: Install Docker CE
-  package:
-    name: docker-ce
-    state: present
-  when: ansible_distribution != "FreeBSD"

@@ -5,7 +5,6 @@
   become_method: sudo
   roles:
     - common
-    - docker-ce
     - system-upgrade
     - role: user-accounts
       createusers:

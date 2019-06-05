@@ -9,6 +9,7 @@
           - htop
           - kicad
           - mlocate
+          - moby-engine
           - neovim
           - openscad
           - python3
