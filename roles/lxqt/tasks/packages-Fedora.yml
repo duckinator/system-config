@@ -1,2 +1,0 @@
-- name: Install LXQt
-  command: dnf install -y "@LXQt Desktop"
