@@ -1,3 +1,5 @@
-- name: Disable overcommit
-  command: sysctl vm.overcommit_memory=2
+- name: Install sysctl config
+  copy:
+    src: roles/operating-system/files/
+    dest: /
   become: true
