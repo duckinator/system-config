@@ -1,8 +1,8 @@
 ---
 create_users:
-  - pup
+  - puppy
 user_accounts:
-  pup:
+  puppy:
     groups: sudo, cdrom, docker, kvm, vboxusers, lp
     shell: bash
     key: https://keyfile-combiner.herokuapp.com?github=duckinator&gitlab=duckinator

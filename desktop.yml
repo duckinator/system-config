@@ -8,5 +8,5 @@
     - system-upgrade
     - role: user-accounts
       createusers:
-      - pup
+      - puppy
     - dotfiles
