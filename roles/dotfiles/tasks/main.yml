@@ -1,23 +1,16 @@
 - name: Clone dotfiles repo.
-  git: repo=https://github.com/duckinator/dotfiles.git version=main dest=/home/pup/dotfiles
+  git: repo=https://github.com/duckinator/dotfiles.git version=main dest=/home/puppy/dotfiles
   become: yes
-  become_user: pup
+  become_user: puppy
 
-- name: Install Emanate (Fedora)
-  dnf:
-    name: emanate
-    state: present
-  when: ansible_distribution == "Fedora"
-
-- name: Install Emanate
-  command: pip3 install --user emanate
-  become: yes
-  become_user: pup
-  when: ansible_distribution != "Fedora"
+- name: Fetch emanate.pyz
+  get_url:
+    url: https://github.com/duckinator/emanate/releases/download/v7.0.0/emanate-7.0.0.pyz
+    dest: /home/puppy/dotfiles/emanate.pyz
 
 # For now, only automatically set up dotfiles on Fedora.
 - name: Set up dotfiles.
-  command: emanate --no-confirm --source /home/pup/dotfiles --destination /home/pup/
+  command: python3 /home/puppy/dotfiles/emanate.pyz --no-confirm --source /home/puppy/dotfiles --destination /home/puppy/
   become: yes
-  become_user: pup
+  become_user: puppy
   when: ansible_distribution == "Fedora"
