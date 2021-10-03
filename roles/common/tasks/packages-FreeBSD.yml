@@ -16,9 +16,9 @@
       - tmux
       - tree
       - xclip
-      - x11/kde5
-      - x11/sddm
       - emulators/linux_base-c7
+      - xorg
+      - xfce
     state: present
 
 - name: Install pip3
@@ -53,16 +53,4 @@
   lineinfile:
     path: /etc/rc.conf
     line: "dbus_enable=\"YES\""
-    state: present
-
-- name: Enable HAL
-  lineinfile:
-    path: /etc/rc.conf
-    line: "hald_enable=\"YES\""
-    state: present
-
-- name: Enable SDDM
-  lineinfile:
-    path: /etc/rc.conf
-    line: "sddm_enable=\"YES\""
     state: present
