@@ -3,7 +3,9 @@ create_users:
   - puppy
 user_accounts:
   puppy:
-    groups: sudo, cdrom, docker, kvm, vboxusers, lp
+    # Removed group that may be useful: lp
+    groups: sudo, cdrom, docker, kvm
     shell: bash
-    key: https://keyfile-combiner.herokuapp.com?github=duckinator&gitlab=duckinator
+    # TODO: Allow multiple URLs, somehow.
+    key: https://github.com/duckinator.keys
 

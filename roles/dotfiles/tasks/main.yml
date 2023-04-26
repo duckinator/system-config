@@ -13,4 +13,4 @@
   command: python3 /home/puppy/dotfiles/emanate.pyz --no-confirm --source /home/puppy/dotfiles --destination /home/puppy/
   become: yes
   become_user: puppy
-  when: ansible_distribution == "Fedora"
+  #when: ansible_distribution == "Fedora"

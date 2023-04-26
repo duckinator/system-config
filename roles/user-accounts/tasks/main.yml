@@ -1,3 +1,10 @@
+# Install py39-jmespath so the "Adding users" task works.
+- name: Install py39-jmespath
+  community.general.pkgng:
+    name:
+      - py39-jmespath
+    state: present
+
 - name: Copy sudo config
   copy:
     src: roles/user-accounts/files/
@@ -34,7 +41,7 @@
     shell_executables: "{{ dict(shell_executables_list) }}"
 
 - name: Add authorized keys
-  authorized_key:
+  ansible.posix.authorized_key:
     user: "{{ item }}"
     key: "{{ user_accounts[item].key }}"
     state: present

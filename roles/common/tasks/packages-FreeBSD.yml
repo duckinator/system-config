@@ -1,5 +1,35 @@
+- name: Enable audio
+  community.general.sysrc:
+    name: snd_hda_load
+    value: "YES"
+    path: /boot/loader.conf
+
+- name: Enable bluetooth
+  community.general.sysrc:
+    name: ng_ubt_load
+    value: "YES"
+    path: /boot/loader.conf
+
+- name: Enable Linux compatability layer
+  community.general.sysrc:
+    name: linux_enable
+    value: "YES"
+    path: /etc/rc.conf
+
+# Needed so we can install Linux compatibility packages
+- name: Start Linux compatibility
+  service:
+    name: linux
+    state: started
+
+- name: Enable D-Bus
+  community.general.sysrc:
+    name: dbus_enable
+    value: "YES"
+    path: /etc/rc.conf
+
 - name: Install common packages
-  pkgng:
+  community.general.pkgng:
     name:
       - bash
       - firefox
@@ -30,27 +60,3 @@
   shell: "pkg install $(/usr/local/bin/ruby --version | cut -d '.' -f 1-2 | sed 's/[ .]//g')-gems"
   environment:
     ASSUME_ALWAYS_YES: "yes"
-
-- name: Enable audio
-  lineinfile:
-    path: /boot/loader.conf
-    line: "snd_hda_load=\"YES\""
-    state: present
-
-- name: Enable bluetooth
-  lineinfile:
-    path: /boot/loader.conf
-    line: "ng_ubt_load=\"YES\""
-    state: present
-
-- name: Enable Linux compatability layer
-  lineinfile:
-    path: /etc/rc.conf
-    line: "linux_enable=\"YES\""
-    state: present
-
-- name: Enable D-Bus
-  lineinfile:
-    path: /etc/rc.conf
-    line: "dbus_enable=\"YES\""
-    state: present
