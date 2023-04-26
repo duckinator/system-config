@@ -1,0 +1,24 @@
+---
+# If this playbook doesn't make nvidia graphics work,
+# try running `nvidia-xconfig` afterwards.
+
+- hosts: 127.0.0.1
+  connection: local
+  become: yes
+  become_method: sudo
+  tasks:
+  - name: Install nvidia-driver
+    community.general.pkgng:
+      name: 
+        - nvidia-driver
+        - nvidia-xconfig
+      state: present
+
+  - name: Enable nvidia kernel module
+    community.general.sysrc:
+      name: kld_list
+      value: nvidia-modeset
+      state: value_present
+      path: /etc/rc.conf
+
+  # TODO: Load nvidia-modeset if needed. 
