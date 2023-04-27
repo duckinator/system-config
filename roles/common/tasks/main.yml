@@ -1,5 +1,5 @@
-- name: Install Packages
-  include_tasks: "packages-{{ ansible_distribution.replace('/', '-').replace(' ', '-') }}.yml"
+- name: Distribution-specific tasks
+  include_tasks: "main-{{ ansible_distribution.replace('/', '-').replace(' ', '-') }}.yml"
 
 - name: Configure and install Flatpak
   include_tasks: "flatpak.yml"
