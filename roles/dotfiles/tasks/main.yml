@@ -1,7 +1,13 @@
+- name: Register status of /home/puppy/dotfiles
+  stat:
+    path: /home/puppy/dotfiles
+  register: dotfiles_path
+
 - name: Clone dotfiles repo.
   git: repo=https://github.com/duckinator/dotfiles.git version=main dest=/home/puppy/dotfiles
   become: yes
   become_user: puppy
+  when: "not dotfiles_path.stat.exists"
 
 - name: Fetch emanate.pyz
   get_url:
