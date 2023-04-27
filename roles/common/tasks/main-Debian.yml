@@ -12,13 +12,13 @@
   apt:
     name:
       - firefox
-      - fish
       - git
       - hexchat
       - htop
       - neovim
       - openscad
       - ruby
+      - python3
       - sudo
       - tmux
       - tree
