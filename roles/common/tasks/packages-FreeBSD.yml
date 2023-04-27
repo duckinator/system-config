@@ -28,6 +28,12 @@
     value: "YES"
     path: /etc/rc.conf
 
+- name: Enable /proc
+  ansible.builtin.lineinfile:
+    path: /etc/fstab
+    line: "proc                    /proc   procfs  rw              0       0"
+    state: present
+
 - name: Install common packages
   community.general.pkgng:
     name:
