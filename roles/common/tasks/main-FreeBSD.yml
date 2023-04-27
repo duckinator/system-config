@@ -56,6 +56,7 @@
       - emulators/linux_base-c7
       - xorg
       - xfce
+      - signal-desktop
     state: present
 
 - name: Install pip3
