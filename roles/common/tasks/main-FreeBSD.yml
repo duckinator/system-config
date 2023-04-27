@@ -31,8 +31,13 @@
 - name: Enable /proc
   ansible.builtin.lineinfile:
     path: /etc/fstab
-    line: "proc                    /proc   procfs  rw              0       0"
+    line: "proc			/proc   	procfs  rw              0       0"
     state: present
+
+- name: Enable
+  ansible.builtin.lineinfile:
+    path: /etc/fstab
+    line: "linsysfs	/compat/linux/sys 	procfs	rw		0	0"
 
 - name: Install common packages
   community.general.pkgng:
