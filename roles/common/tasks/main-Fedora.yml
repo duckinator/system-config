@@ -3,7 +3,6 @@
       name:
           - cura
           - firefox
-          - fish
           - git
           - hexchat
           - htop
@@ -14,7 +13,7 @@
           - openscad
           - python3
           - ruby
-          - rxvt-unicode
+          - xfce4-terminal
           - flatpak
           - sudo
           - tmux
@@ -29,9 +28,3 @@
   command: dnf config-manager --set-enabled {{ item }}
   loop:
     - rpmfusion-nonfree-steam
-
-- name: Install python2-libselinux if needed.
-  dnf:
-    name:
-      - python2-libselinux
-  when: ansible_distribution_major_version == "28"
