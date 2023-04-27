@@ -31,6 +31,7 @@
 - name: Install common packages
   community.general.pkgng:
     name:
+      - bat
       - bash
       - firefox
       - git
@@ -40,8 +41,8 @@
       - neovim
       - openscad
       - python3
+      - py39-pynvim
       - ruby
-      - rxvt-unicode
       - sudo
       - tmux
       - tree
