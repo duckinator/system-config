@@ -10,6 +10,20 @@
     value: "YES"
     path: /boot/loader.conf
 
+# Lets you get temperature info for Intel CPUs.
+- name: Auto-load coretemp module
+  community.general.sysrc:
+    name: coretemp_load
+    value: "YES"
+    path: /boot/loader.conf
+
+# Lets you get temperature info for AMD CPUs.
+- name: Auto-load amdtemp module
+  community.general.sysrc:
+    name: amdtemp_load
+    value: "YES"
+    path: /boot/loader.conf
+
 - name: Enable Linux compatability layer
   community.general.sysrc:
     name: linux_enable
