@@ -1,7 +1,0 @@
-- name: Linux-specific configuration
-  include_tasks: "linux.yml"
-  when: ansible_system == "Linux"
-
-#- name: FreeBSD-specific configuration
-#  include_tasks: "freebsd.yml"
-#  when: ansible_distribution == "FreeBSD"
