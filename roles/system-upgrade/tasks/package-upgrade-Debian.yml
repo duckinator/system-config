@@ -1,3 +1,0 @@
-- name: Perform a system upgrade
-  apt:
-    upgrade: safe
