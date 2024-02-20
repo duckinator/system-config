@@ -1,17 +1,21 @@
 - name: Install common packages
   apt:
     name:
+      - bat
       - curl
       - firefox
       - git
       - hexchat
       - htop
+      - kicad
       - neovim
-      - ruby
+      - openscad
+      - onboard
       - python3
+      - python3-pynvim
+      - ruby
       - sudo
       - tmux
       - tree
       - xclip
-      - onboard
     state: present
