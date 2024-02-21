@@ -15,6 +15,7 @@
       - python3-pynvim
       - ruby
       - sudo
+      - steam-installer
       - tmux
       - tree
       - xclip
