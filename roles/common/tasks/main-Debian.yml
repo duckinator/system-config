@@ -16,6 +16,7 @@
   apt:
     name:
       - bat
+      - build-essential
       - curl
       - firefox-esr
       - git
