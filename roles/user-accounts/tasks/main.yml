@@ -4,11 +4,13 @@
     name:
       - py39-jmespath
     state: present
+  when:  ansible_distribution == "FreeBSD"
 
 - name: Copy sudo config
   copy:
     src: roles/user-accounts/files/
     dest: /
+  when: ansible_distribution == "FreeBSD"
 
 # Creates an absolutely indecipherable dict we have to simplify later.
 - name: Locate shell executables
