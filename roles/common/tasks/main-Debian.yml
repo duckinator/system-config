@@ -3,7 +3,7 @@
     name:
       - bat
       - curl
-      - firefox
+      - firefox-esr
       - git
       - hexchat
       - htop
