@@ -1,4 +1,4 @@
-- name: Add contrib and non-free repositories
+- name: Add contrib repositories
   ansible.builtin.command:
     #cmd: "apt-add-repository -y contrib non-free"
     cmd: "apt-add-repository -y contrib"
@@ -20,8 +20,17 @@
       - python3-pynvim
       - ruby
       - sudo
-      - steam-installer
       - tmux
       - tree
       - xclip
     state: present
+
+- name: Enable multi-arch support (x86-64 only)
+  ansible.builtin.command:
+    cmd: dpkg --add-architecture i386
+  when: ansible_architecture == "x86_64"
+
+- name: Install steam-installer (x86-64 only)
+  apt:
+    name:
+      - steam-installer
