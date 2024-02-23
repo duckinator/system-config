@@ -1,3 +1,8 @@
+- name: Add contrib and non-free repositories
+  ansible.builtin.command:
+    #cmd: "apt-add-repository -y contrib non-free"
+    cmd: "apt-add-repository -y contrib"
+
 - name: Install common packages
   apt:
     name:
