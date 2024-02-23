@@ -28,6 +28,7 @@
       - onboard
       - python3
       - python3-pynvim
+      - python3-termcolor
       - ruby
       - sudo
       - tmux
