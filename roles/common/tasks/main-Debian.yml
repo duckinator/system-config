@@ -22,6 +22,7 @@
       - git
       - hexchat
       - htop
+      - keepassxc
       - kicad
       - liferea
       - neovim
