@@ -18,6 +18,7 @@
       - bat
       - build-essential
       - curl
+      - crun
       - firefox-esr
       - git
       - hexchat
@@ -28,9 +29,11 @@
       - neovim
       - openscad
       - onboard
+      - podman
       - python3
       - python3-pynvim
       - python3-termcolor
+      - python3-venv
       - ruby
       - sudo
       - tmux
