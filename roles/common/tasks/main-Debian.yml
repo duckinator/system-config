@@ -17,8 +17,9 @@
     name:
       - bat
       - build-essential
-      - curl
+      - clang
       - crun
+      - curl
       - firefox-esr
       - git
       - hexchat
