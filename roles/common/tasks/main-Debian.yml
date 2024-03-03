@@ -29,7 +29,7 @@
       - liferea
       - meson
       - neovim
-      - ninja
+      - ninja-build
       - openscad
       - onboard
       - podman
