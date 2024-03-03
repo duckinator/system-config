@@ -30,6 +30,7 @@
       - meson
       - neovim
       - ninja-build
+      - obs-studio
       - openscad
       - onboard
       - podman
