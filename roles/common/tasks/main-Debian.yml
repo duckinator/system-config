@@ -27,7 +27,9 @@
       - keepassxc
       - kicad
       - liferea
+      - meson
       - neovim
+      - ninja
       - openscad
       - onboard
       - podman
