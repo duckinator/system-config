@@ -45,6 +45,13 @@
       - xclip
     state: present
 
+- name: Install packages for Android development
+  apt:
+    name:
+      - adb
+      - android-sdk-platform-tools
+      - sdkmanager
+
 - name: Install steam-installer (x86-64 only)
   apt:
     name:
