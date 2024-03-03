@@ -33,6 +33,7 @@
       - obs-studio
       - openscad
       - onboard
+      - pipewire
       - podman
       - python3
       - python3-pynvim
