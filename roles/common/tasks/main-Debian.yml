@@ -51,6 +51,7 @@
       - adb
       - android-sdk-platform-tools
       - sdkmanager
+      - v4l2loopback-dkms
 
 - name: Install steam-installer (x86-64 only)
   apt:
