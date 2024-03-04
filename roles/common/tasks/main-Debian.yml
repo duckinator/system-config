@@ -34,6 +34,7 @@
       - openscad
       - onboard
       - pipewire
+      - pipx
       - podman
       - python3
       - python3-pynvim
