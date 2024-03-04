@@ -1,2 +1,12 @@
 ---
-- import_playbook: desktop.yml
+- hosts: 127.0.0.1
+  connection: local
+  become: yes
+  become_method: sudo
+  roles:
+    - common
+    - system-upgrade
+    - role: user-accounts
+      createusers:
+      - puppy
+    - dotfiles
