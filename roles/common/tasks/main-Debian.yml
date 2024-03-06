@@ -44,6 +44,7 @@
       - sudo
       - tmux
       - tree
+      - virt-manager
       - xclip
     state: present
 
