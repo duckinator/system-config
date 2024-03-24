@@ -3,12 +3,6 @@
     upgrade: safe
   when: ansible_facts['os_family'] == "Debian"
 
-- name: Perform a system upgrade (Fedora)
-  dnf:
-    name: '*'
-    state: latest
-  when: ansible_facts['distribution'] == "Fedora"
-
 - name: Perform a system upgrade (FreeBSD)
   command: pkg upgrade -y
   when: ansible_facts['os_family'] == "FreeBSD"
