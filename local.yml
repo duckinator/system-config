@@ -9,4 +9,3 @@
     - role: user-accounts
       createusers:
       - puppy
-    - dotfiles
