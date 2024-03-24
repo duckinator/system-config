@@ -43,6 +43,7 @@
       - python3-venv
       - ruby
       - sudo
+      - tigervnc-viewer
       - tmux
       - tree
       - virt-manager
