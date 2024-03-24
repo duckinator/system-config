@@ -1,5 +1,6 @@
 - name: Perform a system upgrade (Debian/Ubuntu)
   apt:
+    update_cache: true
     upgrade: safe
   when: ansible_facts['os_family'] == "Debian"
 
