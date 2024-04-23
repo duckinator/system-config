@@ -43,6 +43,7 @@
       - python3-pynvim
       - python3-termcolor
       - python3-venv
+      - qemu-system
       - ruby
       - sudo
       - tigervnc-viewer
