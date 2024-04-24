@@ -44,6 +44,7 @@
       - python3-termcolor
       - python3-venv
       - qemu-system
+      - qemu-user-static
       - ruby
       - sudo
       - tigervnc-viewer
