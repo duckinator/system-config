@@ -46,6 +46,7 @@
       - qemu-system
       - qemu-user-static
       - ruby
+      - simple-scan
       - sudo
       - tigervnc-viewer
       - tmux
