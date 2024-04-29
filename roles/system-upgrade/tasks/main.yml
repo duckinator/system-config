@@ -1,9 +1,0 @@
-- name: Perform a system upgrade (Debian/Ubuntu)
-  apt:
-    update_cache: true
-    upgrade: safe
-  when: ansible_facts['os_family'] == "Debian"
-
-- name: Perform a system upgrade (FreeBSD)
-  command: pkg upgrade -y
-  when: ansible_facts['os_family'] == "FreeBSD"

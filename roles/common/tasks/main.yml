@@ -1,2 +1,0 @@
-- name: Distribution-specific tasks
-  include_tasks: "main-{{ ansible_distribution.replace('/', '-').replace(' ', '-') }}.yml"

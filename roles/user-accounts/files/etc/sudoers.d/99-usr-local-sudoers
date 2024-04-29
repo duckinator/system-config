@@ -1,2 +1,0 @@
-## Read drop-in files from /usr/local/etc/sudoers.d (the # here does not mean a comment)
-#includedir /usr/local/etc/sudoers.d
