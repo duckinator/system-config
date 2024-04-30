@@ -23,6 +23,8 @@
           - clang
           - crun
           - curl
+          - devscripts
+          - equivs
           - firefox-esr
           - git
           - hexchat
