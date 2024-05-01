@@ -1,3 +1,5 @@
+#!/usr/bin/env equivs-build
+
 ### Commented entries have reasonable defaults.
 ### Uncomment to edit them.
 # Source: <source package name; defaults to package name>
