@@ -1,1 +1,3 @@
-/pup-config
+*.deb
+*.buildinfo
+*.changes
