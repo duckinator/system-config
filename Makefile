@@ -2,6 +2,11 @@ VERSION != egrep '^Version:' pup-config.ctl | cut -d ' ' -f 2
 
 all: deb
 
+bootstrap:
+	apt-add-repository -y contrib && dpkg --add-architecture i386
+	dpkg --add-architecture i386
+	apt install equivs
+
 deb:
 	./pup-config.ctl
 
