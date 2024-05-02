@@ -1,10 +1,22 @@
 # duckinator's system-config
 
-Ansible configuration for my desktop.
+Initial, one-time setup:
 
-Run this command to reproduce my current desktop configuration:
+```
+make bootstrap
+```
 
-    $ ansible-pull -KU https://github.com/duckinator/system-config.git
+Build the .deb:
+
+```
+make
+```
+
+Build + install the .deb:
+
+```
+make install
+```
 
 ## License
 
