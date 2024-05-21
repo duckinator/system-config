@@ -9,7 +9,7 @@ Homepage: https://github.com/duckinator/system-config
 Standards-Version: 3.9.2
 
 Package: pup-config
-Version: 1.6
+Version: 2.0
 Maintainer: Ellen Marie Dash <me@duckie.co>
 # Pre-Depends: <comma-separated list of packages>
 Depends: bat,
@@ -21,7 +21,6 @@ Depends: bat,
  devscripts,
  equivs,
  firefox-esr,
- gamemode,
  git,
  hexchat,
  htop,
@@ -40,7 +39,6 @@ Depends: bat,
  pipenv,
  pipewire,
  pipx,
- plasma-gamemode,
  podman,
  python3,
  python3-pynvim,
@@ -48,11 +46,9 @@ Depends: bat,
  python3-venv,
  qemu-system,
  qemu-user-static,
- ruby,
  simple-scan,
  sox,
  sudo,
- texlive-latex-extra,
  tigervnc-viewer,
  tmux,
  tree,
