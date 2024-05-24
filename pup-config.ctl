@@ -9,7 +9,7 @@ Homepage: https://github.com/duckinator/system-config
 Standards-Version: 3.9.2
 
 Package: pup-config
-Version: 2.0
+Version: 2.1
 Maintainer: Ellen Marie Dash <me@duckie.co>
 # Pre-Depends: <comma-separated list of packages>
 Depends: bat,
@@ -44,6 +44,7 @@ Depends: bat,
  python3-pynvim,
  python3-termcolor,
  python3-venv,
+ qbittorrent,
  qemu-system,
  qemu-user-static,
  simple-scan,
