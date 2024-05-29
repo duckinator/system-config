@@ -9,13 +9,14 @@ Homepage: https://github.com/duckinator/system-config
 Standards-Version: 3.9.2
 
 Package: pup-config
-Version: 2.1
+Version: 2.2
 Maintainer: Ellen Marie Dash <me@duckie.co>
 # Pre-Depends: <comma-separated list of packages>
 Depends: bat,
  build-essential,
  cheese,
  clang,
+ cmake,
  crun,
  curl,
  devscripts,
