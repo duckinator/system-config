@@ -19,7 +19,7 @@ install: deb
 	sudo apt install ./pup-config_${VERSION}_all.deb
 
 ${HOME}/dotfiles:
-	echo git clone https://github.com/duckinator/dotfiles.git ${HOME}/dotfiles
+	git clone https://github.com/duckinator/dotfiles.git ${HOME}/dotfiles
 
 emanate: ${HOME}/dotfiles
 	git -C ${HOME}/dotfiles pull
