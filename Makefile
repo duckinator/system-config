@@ -2,11 +2,14 @@ VERSION != egrep '^Version:' pup-config.ctl | cut -d ' ' -f 2
 
 all: deb
 
-first-run: bootstrap install emanate
+bootstrap: multiarch-i386 deps install emanate
 
-bootstrap:
+# Literally only needed for Steam. Ugh.
+multiarch-i386:
 	apt-add-repository -y contrib && dpkg --add-architecture i386
 	dpkg --add-architecture i386
+
+deps:
 	apt install equivs
 
 deb:
@@ -28,4 +31,4 @@ version:
 clean:
 	rm -f *.deb *.buildinfo *.changes
 
-.PHONY: all deb install clean emanate
+.PHONY: all deb multiarch-i386 deps install clean emanate
