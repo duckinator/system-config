@@ -2,21 +2,25 @@ VERSION != egrep '^Version:' pup-config.ctl | cut -d ' ' -f 2
 
 all: deb
 
-bootstrap: multiarch-i386 deps install
+bootstrap: install steam emanate
 
-# Literally only needed for Steam. Ugh.
-multiarch-i386:
-	apt-add-repository -y contrib && dpkg --add-architecture i386
-	dpkg --add-architecture i386
-
-deps:
-	apt install equivs
-
-deb:
+pup-config_${VERSION}_all.deb:
+	which equivs-build || sudo apt install equivs
 	./pup-config.ctl
+
+deb: pup-config_${VERSION}_all.deb
 
 install: deb
 	sudo apt install ./pup-config_${VERSION}_all.deb
+
+
+multiarch-i386:
+	sudo apt-add-repository -y contrib && sudo dpkg --add-architecture i386
+	sudo dpkg --add-architecture i386
+
+steam: multiarch-i386
+	sudo apt install steam-installer
+
 
 ${HOME}/dotfiles:
 	git clone https://github.com/duckinator/dotfiles.git ${HOME}/dotfiles
@@ -31,4 +35,4 @@ version:
 clean:
 	rm -f *.deb *.buildinfo *.changes
 
-.PHONY: all deb multiarch-i386 deps install clean emanate
+.PHONY: all deb multiarch-i386 install emanate version clean
