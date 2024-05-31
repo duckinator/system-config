@@ -4,21 +4,17 @@ all: deb
 
 bootstrap: install steam emanate
 
-pup-config_${VERSION}_all.deb:
+deb:
 	which equivs-build || sudo apt install equivs
 	./pup-config.ctl
-
-deb: pup-config_${VERSION}_all.deb
 
 install: deb
 	sudo apt install ./pup-config_${VERSION}_all.deb
 
 
-multiarch-i386:
+steam:
 	sudo apt-add-repository -y contrib
 	sudo dpkg --add-architecture i386
-
-steam: multiarch-i386
 	sudo apt install steam-installer
 
 
@@ -35,4 +31,4 @@ version:
 clean:
 	rm -f *.deb *.buildinfo *.changes
 
-.PHONY: all deb multiarch-i386 install emanate version clean
+.PHONY: all bootstrap deb install steam emanate version clean
