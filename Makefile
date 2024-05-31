@@ -15,7 +15,7 @@ install: deb
 
 
 multiarch-i386:
-	sudo apt-add-repository -y contrib && sudo dpkg --add-architecture i386
+	sudo apt-add-repository -y contrib
 	sudo dpkg --add-architecture i386
 
 steam: multiarch-i386
