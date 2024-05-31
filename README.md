@@ -3,7 +3,7 @@
 Initial setup:
 
 ```
-sudo apt install make && git clone https://github.com/duckinator/system-config.git && sudo make bootstrap && make emanate
+sudo apt install make && git clone https://github.com/duckinator/system-config.git && sudo make -C system-config bootstrap && make -C system-config emanate
 ```
 
 Build the .deb:
