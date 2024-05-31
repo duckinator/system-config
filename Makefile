@@ -2,7 +2,7 @@ VERSION != egrep '^Version:' pup-config.ctl | cut -d ' ' -f 2
 
 all: deb
 
-bootstrap: multiarch-i386 deps install emanate
+bootstrap: multiarch-i386 deps install
 
 # Literally only needed for Steam. Ugh.
 multiarch-i386:

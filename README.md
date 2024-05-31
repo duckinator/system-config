@@ -1,9 +1,9 @@
 # duckinator's system-config
 
-Initial, one-time setup:
+Initial setup:
 
 ```
-make bootstrap
+sudo apt install make && git clone https://github.com/duckinator/system-config.git && sudo make bootstrap && make emanate
 ```
 
 Build the .deb:
