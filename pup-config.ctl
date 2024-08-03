@@ -9,12 +9,13 @@ Homepage: https://github.com/duckinator/system-config
 Standards-Version: 3.9.2
 
 Package: pup-config
-Version: 4.3
+Version: 4.4
 Maintainer: Ellen Marie Dash <me@duckie.co>
 # Pre-Depends: <comma-separated list of packages>
 Depends: bat,
  build-essential,
  clang,
+ cloc,
  crun,
  curl,
  devscripts,
