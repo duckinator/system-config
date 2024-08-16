@@ -9,7 +9,7 @@ Homepage: https://github.com/duckinator/system-config
 Standards-Version: 3.9.2
 
 Package: pup-config
-Version: 4.5
+Version: 4.6
 Maintainer: Ellen Marie Dash <me@duckie.co>
 # Pre-Depends: <comma-separated list of packages>
 Depends: bat,
@@ -27,6 +27,7 @@ Depends: bat,
  hexchat,
  hotspot,
  htop,
+ jq,
  kamoso,
  keepassxc,
  kicad,
@@ -62,6 +63,7 @@ Depends: bat,
  uxplay,
  virt-manager,
  xclip,
+ xq,
  adb,
  android-sdk-platform-tools,
  sdkmanager
