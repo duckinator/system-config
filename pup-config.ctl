@@ -9,7 +9,7 @@ Homepage: https://github.com/duckinator/system-config
 Standards-Version: 3.9.2
 
 Package: pup-config
-Version: 4.6
+Version: 4.7
 Maintainer: Ellen Marie Dash <me@duckie.co>
 # Pre-Depends: <comma-separated list of packages>
 Depends: bat,
@@ -61,6 +61,7 @@ Depends: bat,
  tmux,
  tree,
  uxplay,
+ valgrind,
  virt-manager,
  xclip,
  xq,
