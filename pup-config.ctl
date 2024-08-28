@@ -9,7 +9,7 @@ Homepage: https://github.com/duckinator/system-config
 Standards-Version: 3.9.2
 
 Package: pup-config
-Version: 5.0
+Version: 5.1
 Maintainer: Ellen Marie Dash <me@duckie.co>
 # Pre-Depends: <comma-separated list of packages>
 Depends: bat,
@@ -38,6 +38,7 @@ Depends: bat,
  minicom,
  meson,
  neovim,
+ nghttp2-client,
  ninja-build,
  obs-studio,
  openscad,
