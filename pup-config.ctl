@@ -9,7 +9,7 @@ Homepage: https://github.com/duckinator/system-config
 Standards-Version: 3.9.2
 
 Package: pup-config
-Version: 5.2
+Version: 5.3
 Maintainer: Ellen Marie Dash <me@duckie.co>
 # Pre-Depends: <comma-separated list of packages>
 Depends: bat,
@@ -32,7 +32,6 @@ Depends: bat,
  keepassxc,
  kicad,
  krita,
- libjs-d3-flame-graph,
  liferea,
  llvm,
  lshw,
