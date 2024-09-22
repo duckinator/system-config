@@ -9,7 +9,7 @@ Homepage: https://github.com/duckinator/system-config
 Standards-Version: 3.9.2
 
 Package: pup-config
-Version: 6.4
+Version: 6.5
 Maintainer: Ellen Marie Dash <me@duckie.co>
 # Pre-Depends: <comma-separated list of packages>
 Depends: bat,
@@ -19,6 +19,7 @@ Depends: bat,
  cloc,
  crun,
  curl,
+ ddcutil,
  devscripts,
  equivs,
  firefox-esr,
