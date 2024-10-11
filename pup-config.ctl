@@ -9,7 +9,7 @@ Homepage: https://github.com/duckinator/system-config
 Standards-Version: 3.9.2
 
 Package: pup-config
-Version: 6.6
+Version: 7.0
 Maintainer: Ellen Marie Dash <me@duckie.co>
 # Pre-Depends: <comma-separated list of packages>
 Depends: bat,
@@ -40,7 +40,6 @@ Depends: bat,
  lshw,
  minicom,
  meson,
- neochat,
  neovim,
  nghttp2-client,
  ninja-build,
