@@ -9,7 +9,7 @@ Homepage: https://github.com/duckinator/system-config
 Standards-Version: 3.9.2
 
 Package: pup-config
-Version: 7.0
+Version: 7.1
 Maintainer: Ellen Marie Dash <me@duckie.co>
 # Pre-Depends: <comma-separated list of packages>
 Depends: bat,
@@ -47,6 +47,7 @@ Depends: bat,
  openscad,
  onboard,
  pandoc,
+ picard,
  pipenv,
  pipewire,
  pipx,
@@ -61,6 +62,7 @@ Depends: bat,
  simple-scan,
  sox,
  sudo,
+ strawberry,
  stress-ng,
  tigervnc-viewer,
  tmux,
