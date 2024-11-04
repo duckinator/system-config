@@ -9,7 +9,7 @@ Homepage: https://github.com/duckinator/system-config
 Standards-Version: 3.9.2
 
 Package: pup-config
-Version: 8.0
+Version: 8.1
 Maintainer: Ellen Marie Dash <me@duckie.co>
 # Pre-Depends: <comma-separated list of packages>
 Depends: bat,
@@ -21,6 +21,7 @@ Depends: bat,
  curl,
  ddcutil,
  devscripts,
+ direwolf,
  equivs,
  firefox-esr,
  flatpak-builder,
@@ -71,6 +72,7 @@ Depends: bat,
  valgrind,
  virt-manager,
  wl-clipboard,
+ xastir,
  xq,
  adb,
  android-sdk-platform-tools,
