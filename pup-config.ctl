@@ -9,7 +9,7 @@ Homepage: https://github.com/duckinator/system-config
 Standards-Version: 3.9.2
 
 Package: pup-config
-Version: 9.1
+Version: 9.2
 Maintainer: Ellen Marie Dash <me@duckie.co>
 # Pre-Depends: <comma-separated list of packages>
 Depends: bat,
@@ -27,6 +27,7 @@ Depends: bat,
  flatpak-builder,
  git,
  gramps,
+ heaptrack,
  heaptrack-gui,
  hexchat,
  hotspot,
