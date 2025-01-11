@@ -84,7 +84,15 @@ Depends: gir1.2-ges-1.0,
  libucx0,
  libvtk9.1,
  libx11-xcb-dev,
- opencv-data
+ opencv-data,
+ libges-1.0-dev,
+ libgles2-mesa-dev,
+ libgstreamer-plugins-bad1.0-dev,
+ libgstreamer-plugins-base1.0-dev,
+ libgstrtspserver-1.0-dev,
+ libxcb-shape0-dev,
+ libxcb-xfixes0-dev,
+ llvm-dev
 # Recommends: <comma-separated list of packages>
 # Suggests: <comma-separated list of packages>
 # Provides: <comma-separated list of packages>
