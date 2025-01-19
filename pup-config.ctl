@@ -9,7 +9,7 @@ Homepage: https://github.com/duckinator/system-config
 Standards-Version: 3.9.2
 
 Package: pup-config
-Version: 9.6
+Version: 9.7
 Maintainer: Ellen Marie Dash <me@duckie.co>
 # Pre-Depends: <comma-separated list of packages>
 Depends: abcde,
@@ -18,6 +18,7 @@ Depends: abcde,
  clang,
  clang-16,
  cloc,
+ cpu-x,
  crun,
  curl,
  ddcutil,
