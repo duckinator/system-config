@@ -9,14 +9,14 @@ Homepage: https://github.com/duckinator/system-config
 Standards-Version: 3.9.2
 
 Package: pup-config
-Version: 9.7
+Version: 10.0
 Maintainer: Ellen Marie Dash <me@duckie.co>
 # Pre-Depends: <comma-separated list of packages>
 Depends: abcde,
  bat,
  build-essential,
  clang,
- clang-16,
+ clang-19,
  cloc,
  cpu-x,
  crun,
@@ -44,6 +44,7 @@ Depends: abcde,
  krita,
  liburing-dev,
  liferea,
+ lld-19,
  llvm,
  lshw,
  minicom,
