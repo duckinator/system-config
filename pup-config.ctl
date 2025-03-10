@@ -9,7 +9,7 @@ Homepage: https://github.com/duckinator/system-config
 Standards-Version: 3.9.2
 
 Package: pup-config
-Version: 10.2
+Version: 11.0
 Maintainer: Ellen Marie Dash <me@duckie.co>
 # Pre-Depends: <comma-separated list of packages>
 Depends: abcde,
@@ -42,7 +42,6 @@ Depends: abcde,
  jq,
  kamoso,
  keepassxc,
- kicad,
  krita,
  liburing-dev,
  liferea,
