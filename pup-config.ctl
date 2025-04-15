@@ -9,11 +9,12 @@ Homepage: https://github.com/duckinator/system-config
 Standards-Version: 3.9.2
 
 Package: pup-config
-Version: 11.0
+Version: 11.1
 Maintainer: Ellen Marie Dash <me@duckie.co>
 # Pre-Depends: <comma-separated list of packages>
 Depends: abcde,
  at,
+ avrdude,
  bat,
  build-essential,
  clang,
