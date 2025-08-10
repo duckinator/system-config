@@ -9,7 +9,7 @@ Homepage: https://github.com/duckinator/system-config
 Standards-Version: 3.9.2
 
 Package: pup-config
-Version: 11.5
+Version: 12.0
 Maintainer: Ellen Marie Dash <me@duckie.co>
 # Pre-Depends: <comma-separated list of packages>
 Depends: abcde,
@@ -35,12 +35,12 @@ Depends: abcde,
  flac,
  flatpak-builder,
  gamemode,
+ gimp,
  git,
  gramps,
  heaptrack,
  heaptrack-gui,
  hexchat,
- hotspot,
  htop,
  jq,
  kamoso,
