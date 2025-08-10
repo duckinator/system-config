@@ -9,7 +9,7 @@ Homepage: https://github.com/duckinator/system-config
 Standards-Version: 3.9.2
 
 Package: pup-config
-Version: 11.4
+Version: 11.5
 Maintainer: Ellen Marie Dash <me@duckie.co>
 # Pre-Depends: <comma-separated list of packages>
 Depends: abcde,
@@ -80,6 +80,7 @@ Depends: abcde,
  strawberry,
  stress-ng,
  tigervnc-viewer,
+ timeshift,
  tmux,
  tree,
  uxplay,
