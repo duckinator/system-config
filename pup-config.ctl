@@ -9,7 +9,7 @@ Homepage: https://github.com/duckinator/system-config
 Standards-Version: 3.9.2
 
 Package: pup-config
-Version: 12.2
+Version: 12.3
 Maintainer: Ellen Marie Dash <me@duckie.co>
 # Pre-Depends: <comma-separated list of packages>
 Depends: abcde,
@@ -89,6 +89,7 @@ Depends: abcde,
  valgrind,
  virt-manager,
  wl-clipboard,
+ wormhole-william,
  xastir,
  xq
 # Recommends: <comma-separated list of packages>
