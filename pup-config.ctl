@@ -9,7 +9,7 @@ Homepage: https://github.com/duckinator/system-config
 Standards-Version: 3.9.2
 
 Package: pup-config
-Version: 13.1
+Version: 13.2
 Maintainer: Ellen Marie Dash <me@duckie.co>
 # Pre-Depends: <comma-separated list of packages>
 Depends: abcde,
@@ -75,6 +75,7 @@ Depends: abcde,
  pipewire,
  pipx,
  podman,
+ pv,
  python3,
  python3-pynvim,
  python3-termcolor,
