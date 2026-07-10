@@ -9,7 +9,7 @@ Homepage: https://github.com/duckinator/system-config
 Standards-Version: 3.9.2
 
 Package: pup-config
-Version: 14.0
+Version: 14.1
 Maintainer: Ellen Marie Dash <me@duckie.co>
 # Pre-Depends: <comma-separated list of packages>
 Depends: abcde,
@@ -55,7 +55,7 @@ Depends: abcde,
  libspa-0.2-bluetooth,
  liburing-dev,
  liferea,
- lld-19,
+ lld,
  llvm,
  lshw,
  minicom,
